@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/chat_layout"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+
+    <ListView
+        android:id="@+id/list_view_chat"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:divider="@drawable/chat_divider"
+        android:layout_width="match_parent"
+        android:scrollbarStyle="outsideOverlay"
+        android:layout_above="@+id/bottomlayout"
+        android:layout_height="match_parent"></ListView>
+
+    <LinearLayout
+        android:id="@+id/bottomlayout"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:id="@+id/et_send"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollHorizontally="false"
+                android:layout_toLeftOf="@+id/send"
+
+                android:layout_toStartOf="@+id/send"
+                android:hint="@string/type_your_message"
+                android:maxLines="4"
+                android:inputType="textCapSentences"
+
+                android:textSize="18sp"
+                android:paddingLeft="4dp" />
+
+            <ImageView android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/send"
+                android:layout_width="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/et_send"
+                android:paddingLeft="13dp"
+                android:paddingStart="13dp"
+                android:paddingRight="17dp"
+                android:paddingEnd="17dp"
+                android:src="@drawable/ic_chat_send" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

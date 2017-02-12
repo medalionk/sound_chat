@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:background="@drawable/bubble_received"
+        android:layout_height="wrap_content"
+        android:id="@+id/bubble_layout">
+
+        <LinearLayout
+            android:id="@+id/chat_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="8dp"
+                android:paddingTop="5dp"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                android:text="User"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/tv_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                style="@style/chat_text_message_style"
+                android:paddingLeft="20dp"
+                android:autoLink="web"
+                android:maxWidth="280dp"
+                android:text="" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_alignBottom="@id/chat_layout"
+            android:layout_marginLeft="10dp"
+            style="@style/chat_timings"
+            android:paddingRight="20dp"
+            android:textColor="@color/gray"
+            android:paddingBottom="5dp"
+            android:layout_toRightOf="@id/chat_layout"
+            android:text="" />
+    </RelativeLayout>
+</RelativeLayout>
